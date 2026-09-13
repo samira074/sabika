@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[100];
+    int pos, n, i;
+
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    printf("Enter position: ");
+    scanf("%d", &pos);
+
+    printf("Enter number of characters to delete: ");
+    scanf("%d", &n);
+
+    for(i = pos; str[i + n] != '\0'; i++)
+        str[i] = str[i + n];
+
+    str[i] = '\0';
+
+    printf("Result = %s", str);
+
+    return 0;
+}
